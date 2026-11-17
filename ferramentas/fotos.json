@@ -1,11 +1,30 @@
 [
   {
-    "id": "estabulos",
-    "arquivo": "Parque do Trote 20.jpg",
-    "autor": "GusRibeiro",
-    "licenca": "CC BY-SA 4.0",
-    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
-    "legenda": "As antigas cocheiras, preservadas"
+    "id": "pista-spt",
+    "arquivo": "Pista SPT.jpg",
+    "autor": "Ariadne Barroso (Idril86)",
+    "licenca": "CC BY-SA 3.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br",
+    "descricao_commons": "Pista de trote do Parque Vila Guilherme-Trote, antes pista da Sociedade Paulista de Trote, em 2011",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pista_SPT.jpg"
+  },
+  {
+    "id": "salao-spt",
+    "arquivo": "Salão SPT.jpg",
+    "autor": "Ariadne Barroso (Idril86)",
+    "licenca": "CC BY-SA 3.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br",
+    "descricao_commons": "Antigo salão da Sociedade Paulista de Trote, em 2011",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Salão_SPT.jpg"
+  },
+  {
+    "id": "torres-spt",
+    "arquivo": "Torres SPT.jpg",
+    "autor": "Ariadne Barroso (Idril86)",
+    "licenca": "CC BY-SA 3.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br",
+    "descricao_commons": "Torres e arquibancadas da Sociedade Paulista de Trote, em 2011",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Torres_SPT.jpg"
   },
   {
     "id": "pergola",
@@ -13,22 +32,52 @@
     "autor": "GusRibeiro",
     "licenca": "CC BY-SA 4.0",
     "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
-    "legenda": "A pérgola e o caminho de tijolos"
+    "descricao_commons": "Um dos corredores para frequentadores e ciclistas, 2016",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_do_Trote_3.jpg"
   },
   {
-    "id": "pista-antiga",
+    "id": "pista",
     "arquivo": "Parque do Trote 16.jpg",
     "autor": "GusRibeiro",
     "licenca": "CC BY-SA 4.0",
     "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
-    "legenda": "A pista do antigo hipódromo"
+    "descricao_commons": "Pista para corrida e ciclistas, 2016",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_do_Trote_16.jpg"
   },
   {
-    "id": "casa",
-    "arquivo": "Parque do Trote 11.jpg",
+    "id": "casarao",
+    "arquivo": "Parque do Trote 20.jpg",
     "autor": "GusRibeiro",
     "licenca": "CC BY-SA 4.0",
     "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
-    "legenda": "Uma das construções históricas"
+    "descricao_commons": "Um dos casarões do parque, 2016",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_do_Trote_20.jpg"
+  },
+  {
+    "id": "entrada",
+    "arquivo": "Parque do Trote 2.jpg",
+    "autor": "GusRibeiro",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    "descricao_commons": "Entrada principal do parque, 2016",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_do_Trote_2.jpg"
+  },
+  {
+    "id": "bancos",
+    "arquivo": "Parque do Trote 6.jpg",
+    "autor": "GusRibeiro",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    "descricao_commons": "Área com bancos embaixo das árvores, 2016",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_do_Trote_6.jpg"
+  },
+  {
+    "id": "verde",
+    "arquivo": "Parque Vila Maria-Trote.jpg",
+    "autor": "Ariadne Barroso (Idril86)",
+    "licenca": "CC BY-SA 3.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/3.0/deed.pt-br",
+    "descricao_commons": "Parte da vegetação próxima ao parquinho das crianças, 2011",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parque_Vila_Maria-Trote.jpg"
   }
 ]

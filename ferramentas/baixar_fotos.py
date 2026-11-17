@@ -44,10 +44,15 @@ def tratar(im: Image.Image) -> Image.Image:
 def main() -> int:
     fotos = json.loads((RAIZ / "ferramentas" / "fotos.json").read_text(encoding="utf-8"))
     SAIDA.mkdir(parents=True, exist_ok=True)
+    # só ficam as fotos da lista (todas com licença livre); qualquer outra sai da pasta
+    for velho in SAIDA.glob("*.jpg"):
+        velho.unlink()
     for f in fotos:
         im = tratar(baixar(f["arquivo"]))
         destino = SAIDA / f"{f['id']}.jpg"
         im.save(destino, quality=80, optimize=True, progressive=True)
+        menor = im.resize((900, round(im.height * 900 / im.width)), Image.LANCZOS)
+        menor.save(SAIDA / f"{f['id']}-900.jpg", quality=78, optimize=True, progressive=True)
         print(f"{destino.name}: {im.width}x{im.height}, {destino.stat().st_size // 1024} KB")
     return 0
 

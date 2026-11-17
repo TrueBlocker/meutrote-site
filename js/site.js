@@ -53,9 +53,14 @@
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (s) {
       if (!s || typeof s.abertoAgora !== "boolean") return;
-      var frase = typeof s.textoCombinado === "string" && s.textoCombinado.length < 90
-        ? s.textoCombinado
-        : (s.abertoAgora ? "Aberto agora" : "Fechado agora");
+      // texto montado aqui (o do servidor também fala do aluguel de bikes, que o site não mostra)
+      var hora = /^\d{2}:\d{2}/;
+      var frase;
+      if (s.abertoAgora) {
+        frase = "Aberto agora" + (hora.test(s.fechaAs || "") ? " · fecha às " + s.fechaAs.slice(0, 5) : "");
+      } else {
+        frase = "Fechado agora" + (hora.test(s.abreAs || "") ? " · abre às " + s.abreAs.slice(0, 5) : "");
+      }
       mostrar(s.abertoAgora, frase);
     })
     .catch(function () { /* fica a conta pela agenda */ })
