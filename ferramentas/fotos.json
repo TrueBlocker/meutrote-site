@@ -1,0 +1,34 @@
+[
+  {
+    "id": "estabulos",
+    "arquivo": "Parque do Trote 20.jpg",
+    "autor": "GusRibeiro",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    "legenda": "As antigas cocheiras, preservadas"
+  },
+  {
+    "id": "pergola",
+    "arquivo": "Parque do Trote 3.jpg",
+    "autor": "GusRibeiro",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    "legenda": "A pérgola e o caminho de tijolos"
+  },
+  {
+    "id": "pista-antiga",
+    "arquivo": "Parque do Trote 16.jpg",
+    "autor": "GusRibeiro",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    "legenda": "A pista do antigo hipódromo"
+  },
+  {
+    "id": "casa",
+    "arquivo": "Parque do Trote 11.jpg",
+    "autor": "GusRibeiro",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    "legenda": "Uma das construções históricas"
+  }
+]

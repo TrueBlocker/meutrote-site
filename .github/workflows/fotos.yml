@@ -1,0 +1,25 @@
+name: Baixar fotos do Wikimedia
+
+# Rodar à mão (Actions → "Baixar fotos do Wikimedia" → Run workflow) quando a lista em ferramentas/fotos.json mudar.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow==11.3.0 numpy==2.3.2
+      - run: python ferramentas/baixar_fotos.py
+      - name: Commitar as fotos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/fotos
+          git diff --cached --quiet && echo "Nada mudou." || git commit -m "Fotos do Wikimedia Commons (CC BY-SA)" && git push
