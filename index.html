@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MeuTrote · o app da comunidade do Parque do Trote</title>
+  <meta name="description" content="App gratuito para quem frequenta o Parque do Trote, na Vila Guilherme (São Paulo): veja se o parque está aberto, registre caminhadas, corridas e pedaladas e mande sugestões para o parque.">
+  <meta name="theme-color" content="#7B4A2B">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="MeuTrote · o Parque do Trote na palma da mão">
+  <meta property="og:description" content="App gratuito da comunidade do Parque do Trote, na Vila Guilherme. Treinos, o parque agora e a voz de quem frequenta.">
+  <meta property="og:image" content="img/fotos/pista.jpg">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src https://meutrote-app-da-comunidade.onrender.com; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="img/marca/icone.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/marca/apple-touch-icon.png">
+  <link rel="preload" href="fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- faixa de cima: como a placa da portaria -->
+  <div class="placa" role="region" aria-label="Situação do parque">
+    <div class="placa__dentro">
+      <span class="placa__lugar">Parque do Trote · Vila Guilherme, São Paulo</span>
+      <span class="placa__status" data-status aria-live="polite">
+        <span class="ponto" aria-hidden="true"></span>
+        <span data-status-texto>Aberto todos os dias, das 5h30 às 22h</span>
+      </span>
+    </div>
+  </div>
+
+  <header class="topo">
+    <div class="topo__dentro">
+      <a class="marca" href="#" aria-label="MeuTrote, início">
+        <img src="img/marca/trotador.svg" alt="" width="44" height="44">
+        <span class="marca__nome">Meu<b>Trote</b></span>
+      </a>
+      <nav class="menu" aria-label="Seções">
+        <a href="#app">O app</a>
+        <a href="#parque">O parque</a>
+        <a href="#meta">Nossa meta</a>
+        <a href="#dados">Seus dados</a>
+      </nav>
+      <a class="botao botao--pequeno" href="#baixar">Baixar</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ── Abertura ─────────────────────────────────────────────── -->
+    <section class="abertura">
+      <svg class="abertura__pista" viewBox="0 0 1200 700" aria-hidden="true" focusable="false">
+        <rect x="40" y="60" width="1120" height="580" rx="290" />
+        <rect x="110" y="130" width="980" height="440" rx="220" class="raia-meio" />
+        <rect x="180" y="200" width="840" height="300" rx="150" />
+      </svg>
+
+      <div class="abertura__texto">
+        <p class="sobretitulo revela">App gratuito da comunidade</p>
+        <h1 class="revela">O Parque do Trote <span>na palma da mão.</span></h1>
+        <p class="abertura__lead revela">
+          Veja se o parque está aberto, registre sua caminhada, corrida ou pedalada e diga o que o parque precisa.
+          Feito por quem frequenta a pista, para quem frequenta a pista.
+        </p>
+        <div class="acoes revela" id="baixar-topo">
+          <span class="botao botao--loja" aria-disabled="true">
+            <span class="botao__miudo">Em breve na</span>
+            <span class="botao__grande">Google Play</span>
+          </span>
+          <a class="botao botao--apk" href="https://meutrote-app-da-comunidade.onrender.com/api/v1/public/app/android/download" rel="nofollow">
+            Baixar a versão de teste <small>Android · APK</small>
+          </a>
+        </div>
+        <p class="nota revela">Grátis, sem propaganda. iPhone em breve.</p>
+      </div>
+
+      <figure class="abertura__foto revela">
+        <img src="img/fotos/pista.jpg" alt="Caminho de terra batida da antiga pista de trote, ladeado de grama e árvores, sob céu azul"
+             width="1086" height="1448" fetchpriority="high">
+        <figcaption><span>Desde 1944</span> A pista do antigo hipódromo, hoje de quem caminha e corre.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ── Marco 1: o app ─────────────────────────────────────────── -->
+    <section class="secao" id="app" aria-labelledby="t-app">
+      <div class="marco" aria-hidden="true"><span class="marco__poste">100 m</span><span class="marco__raias"></span></div>
+      <header class="secao__cabeca">
+        <p class="sobretitulo">O que o app faz</p>
+        <h2 id="t-app">Tudo o que você precisa para aproveitar o parque, num lugar só.</h2>
+      </header>
+
+      <ol class="funcoes">
+        <li class="funcao">
+          <span class="funcao__num">01</span>
+          <div>
+            <h3>O parque agora</h3>
+            <p>Aberto ou fechado, horário de hoje, clima e se tem bicicleta para alugar. Os avisos da administração chegam direto no celular.</p>
+          </div>
+        </li>
+        <li class="funcao">
+          <span class="funcao__num">02</span>
+          <div>
+            <h3>Seus treinos</h3>
+            <p>Caminhada, corrida e bike com mapa, distância, tempo e calorias. Corda que conta os pulos sozinha e os treinos da academia ao ar livre.</p>
+          </div>
+        </li>
+        <li class="funcao">
+          <span class="funcao__num">03</span>
+          <div>
+            <h3>A meta da semana</h3>
+            <p>150 minutos de atividade por semana, a recomendação da Organização Mundial da Saúde. Você sobe de nível, ganha conquistas e veste o seu avatar.</p>
+          </div>
+        </li>
+        <li class="funcao">
+          <span class="funcao__num">04</span>
+          <div>
+            <h3>A voz de quem frequenta</h3>
+            <p>Um mural para sugestões, elogios e problemas do parque, com o botão “Eu também” para apoiar. E a agenda de eventos, com confirmação de presença.</p>
+          </div>
+        </li>
+        <li class="funcao">
+          <span class="funcao__num">05</span>
+          <div>
+            <h3>Ligas, só se você quiser</h3>
+            <p>Disputas semanais entre frequentadores, por pontos de treino. Começam desligadas: você entra se tiver vontade.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ── Marco 2: o parque ──────────────────────────────────────── -->
+    <section class="secao secao--parque" id="parque" aria-labelledby="t-parque">
+      <div class="marco" aria-hidden="true"><span class="marco__poste">200 m</span><span class="marco__raias"></span></div>
+      <header class="secao__cabeca">
+        <p class="sobretitulo">O parque</p>
+        <h2 id="t-parque">Uma pista de corrida de cavalos que virou de todo mundo.</h2>
+      </header>
+
+      <ol class="linha" aria-label="Linha do tempo do parque">
+        <li><b>1944</b><span>A Sociedade Paulista do Trote inaugura a pista na Vila Guilherme.</span></li>
+        <li><b>2002</b><span>Acontecem as últimas corridas de trote.</span></li>
+        <li><b>2006</b><span>A Prefeitura abre o Parque do Trote, preservando a pista e as construções.</span></li>
+        <li><b>Hoje</b><span>Junto com o Parque Vila Guilherme, são cerca de 185 mil m² de área verde.</span></li>
+      </ol>
+
+      <div class="galeria">
+        <figure class="g g--alta"><img src="img/fotos/estabulos.jpg" alt="Antigas cocheiras de telhado vermelho entre árvores grandes" loading="lazy" width="1600" height="900"><figcaption>As antigas cocheiras, preservadas</figcaption></figure>
+        <figure class="g"><img src="img/fotos/coruja.jpg" alt="Coruja-buraqueira na grama" loading="lazy" width="1289" height="1221"><figcaption>Coruja-buraqueira, vizinha da pista</figcaption></figure>
+        <figure class="g"><img src="img/fotos/pergola.jpg" alt="Caminho de tijolos sob uma pérgola de madeira" loading="lazy" width="1600" height="900"><figcaption>A pérgola</figcaption></figure>
+        <figure class="g g--larga"><img src="img/fotos/pista-antiga.jpg" alt="Pista de terra do antigo hipódromo, com árvores ao fundo" loading="lazy" width="1600" height="900"><figcaption>A pista do antigo hipódromo</figcaption></figure>
+        <figure class="g"><img src="img/fotos/passaro.jpg" alt="Pássaro preto pousado num galho contra o céu azul" loading="lazy" width="1448" height="1086"><figcaption>Céu de manhã cedo</figcaption></figure>
+        <figure class="g"><img src="img/fotos/casa.jpg" alt="Casa histórica branca de telhado de telha, com varanda" loading="lazy" width="1600" height="900"><figcaption>Construções históricas</figcaption></figure>
+      </div>
+
+      <dl class="numeros">
+        <div><dt>67</dt><dd>espécies de aves registradas</dd></div>
+        <div><dt>109</dt><dd>espécies de plantas, entre elas o jequitibá-rosa e o pau-brasil</dd></div>
+        <div><dt>5h30–22h</dt><dd>aberto todos os dias</dd></div>
+      </dl>
+      <p class="fonte">Números da Secretaria Municipal do Verde e do Meio Ambiente (inventários de fauna e flora).</p>
+    </section>
+
+    <!-- ── Marco 3: meta ──────────────────────────────────────────── -->
+    <section class="secao secao--meta" id="meta" aria-labelledby="t-meta">
+      <div class="marco marco--claro" aria-hidden="true"><span class="marco__poste">300 m</span><span class="marco__raias"></span></div>
+      <div class="meta">
+        <div class="meta__titulo">
+          <p class="sobretitulo">Nossa meta</p>
+          <h2 id="t-meta">Mais gente se mexendo no parque. E um parque que escuta quem usa.</h2>
+          <img class="meta__ceu" src="img/fotos/ceu.jpg" alt="Copas de árvores se abrindo para o céu azul" loading="lazy" width="1448" height="1086">
+        </div>
+        <ul class="meta__lista">
+          <li>
+            <h3>Saúde de verdade</h3>
+            <p>Ajudar cada frequentador a chegar aos 150 minutos de atividade por semana, no ritmo dele, sem comparação forçada.</p>
+          </li>
+          <li>
+            <h3>Um canal que chega</h3>
+            <p>Sugestões e problemas organizados num lugar só, para a gestão do parque saber o que a comunidade precisa.</p>
+          </li>
+          <li>
+            <h3>Dados para cuidar melhor</h3>
+            <p>Números de uso somados e sem identificar ninguém, como os horários mais cheios, para ajudar a planejar o parque.</p>
+          </li>
+          <li>
+            <h3>Começar pelo Trote</h3>
+            <p>Começamos pelo parque da nossa vizinhança. A ideia é, um dia, levar o mesmo cuidado a outros parques da cidade.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Marco 4: dados ─────────────────────────────────────────── -->
+    <section class="secao" id="dados" aria-labelledby="t-dados">
+      <div class="marco" aria-hidden="true"><span class="marco__poste">400 m</span><span class="marco__raias"></span></div>
+      <header class="secao__cabeca">
+        <p class="sobretitulo">Seus dados, suas regras</p>
+        <h2 id="t-dados">Feito seguindo a LGPD e o ECA Digital desde o primeiro dia.</h2>
+      </header>
+      <ul class="selos">
+        <li><b>Sem propaganda.</b> Não vendemos dados nem montamos perfil de consumo.</li>
+        <li><b>Peso e idade só com o seu aval.</b> Dado de saúde pede consentimento separado.</li>
+        <li><b>Ranking só se quiser.</b> Seu perfil público mostra só o nome de usuário e o avatar.</li>
+        <li><b>Modo adolescente.</b> De 13 a 17 anos, o app já começa com as opções mais protetoras.</li>
+        <li><b>Seus dados na mão.</b> Baixe uma cópia ou apague a conta pelo próprio app, quando quiser.</li>
+        <li><b>Conta protegida.</b> Entrada com digital e verificação em duas etapas.</li>
+      </ul>
+      <p class="secao__link"><a href="https://meutrote-app-da-comunidade.onrender.com/privacy">Ler a política de privacidade completa</a></p>
+    </section>
+
+    <!-- ── Baixar ─────────────────────────────────────────────────── -->
+    <section class="baixar" id="baixar" aria-labelledby="t-baixar">
+      <img class="baixar__cavalo" src="img/marca/trotador-creme.svg" alt="" width="220" height="220">
+      <div class="baixar__texto">
+        <h2 id="t-baixar">Baixe e venha para a pista.</h2>
+        <div class="acoes">
+          <span class="botao botao--loja botao--claro" aria-disabled="true">
+            <span class="botao__miudo">Em breve na</span>
+            <span class="botao__grande">Google Play</span>
+          </span>
+          <a class="botao botao--apk botao--claro" href="https://meutrote-app-da-comunidade.onrender.com/api/v1/public/app/android/download" rel="nofollow">
+            Baixar a versão de teste <small>Android · APK</small>
+          </a>
+        </div>
+      </div>
+
+      <div class="perguntas">
+        <details>
+          <summary>É de graça?</summary>
+          <p>Sim, e continua assim. Não tem propaganda nem compra dentro do app: a lojinha do avatar usa só as gemas que você ganha treinando.</p>
+        </details>
+        <details>
+          <summary>Como instalo a versão de teste?</summary>
+          <p>Toque em “Baixar a versão de teste” no celular Android. Quando o download terminar, abra o arquivo. O Android vai pedir para permitir a instalação “desta fonte”: permita só para o navegador e instale. Quando o app chegar na Google Play, é só instalar por lá.</p>
+        </details>
+        <details>
+          <summary>Tem para iPhone?</summary>
+          <p>Ainda não. Começamos pelo Android e o iPhone vem depois.</p>
+        </details>
+        <details>
+          <summary>É um app da Prefeitura?</summary>
+          <p>Não. O MeuTrote é um projeto de extensão universitária, independente, que conversa com a gestão do parque. Não é um canal oficial da Prefeitura de São Paulo. Para pedidos oficiais, use o SP156.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape__dentro">
+      <div class="rodape__marca">
+        <svg class="selo" viewBox="0 0 200 200" role="img" aria-label="Selo MeuTrote, Parque do Trote, Vila Guilherme, SP">
+          <defs>
+            <path id="arco-cima" d="M 30 100 A 70 70 0 0 1 170 100" />
+            <path id="arco-baixo" d="M 26 100 A 74 74 0 0 0 174 100" />
+          </defs>
+          <circle cx="100" cy="100" r="96" class="selo__borda" />
+          <circle cx="100" cy="100" r="88" class="selo__fio" />
+          <circle cx="100" cy="100" r="52" class="selo__miolo" />
+          <text class="selo__texto"><textPath href="#arco-cima" startOffset="50%" text-anchor="middle">PARQUE DO TROTE</textPath></text>
+          <text class="selo__texto"><textPath href="#arco-baixo" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">VILA GUILHERME · SP</textPath></text>
+          <image href="img/marca/trotador-creme.svg" x="62" y="60" width="76" height="76" />
+        </svg>
+        <p>MeuTrote é um projeto de extensão universitária, feito com carinho na Vila Guilherme.</p>
+      </div>
+
+      <div class="rodape__col">
+        <h3>Como chegar</h3>
+        <p>Portaria 1: Av. Nadir Dias Figueiredo, s/n<br>Portaria 2: Rua São Quirino, 905<br>Vila Guilherme, São Paulo</p>
+        <p>Aberto todos os dias, das 5h30 às 22h.</p>
+      </div>
+
+      <div class="rodape__col">
+        <h3>Links</h3>
+        <p><a href="https://meutrote-app-da-comunidade.onrender.com/privacy">Política de privacidade</a><br>
+          <a href="https://www.prefeitura.sp.gov.br/web/meio_ambiente/w/parques/regiao_norte/143403">O parque no site da Prefeitura</a></p>
+      </div>
+    </div>
+
+    <div class="creditos">
+      <p>
+        Fotos: pista, coruja, pássaro e céu, de Esdras. Cocheiras, pérgola, pista antiga e casa histórica de
+        <a href="https://commons.wikimedia.org/wiki/User:GusRibeiro">GusRibeiro</a>
+        (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br">CC BY-SA 4.0</a>), via Wikimedia Commons,
+        com ajuste de cor. Elas continuam sob a mesma licença.
+      </p>
+      <p>Não é um canal oficial da Prefeitura de São Paulo. Este site não usa cookies nem rastreadores.</p>
+    </div>
+  </footer>
+</body>
+</html>
